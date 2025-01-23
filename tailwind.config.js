@@ -19,7 +19,12 @@ module.exports = {
           primary: "#FFFFFF",
           secondary: "#B0B0B0",
         },
+        border: "#333333", // Add this line for border color
       },
+      borderColor: (theme) => ({
+        ...theme("colors"),
+        DEFAULT: theme("colors.border", "currentColor"),
+      }),
     },
   },
   plugins: [],
